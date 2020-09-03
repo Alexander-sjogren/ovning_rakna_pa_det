@@ -8,7 +8,7 @@
 <body>
     <input type="number" id="input1" placeholder="enter number">
     <input type="number" id="input2" placeholder="enter number">
-    <select id="math" onchange="test();">
+    <select id="math">
         <option id="addition" value="+">+</option>
         <option id="subctraction" value="-">-</option>
         <option id="division" value="/">/</option>
@@ -16,7 +16,7 @@
     </select>
     <label for="math">Välj Räknesätt</label>
     <br>
-    <button id="btn">Calculate!</button>
+    <button onclick="btnPress();" id="btn">Calculate!</button>
     <fieldset id="output">
         <legend>Resultat:</legend>
     </fieldset>
