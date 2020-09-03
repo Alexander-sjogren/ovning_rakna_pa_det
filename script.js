@@ -10,8 +10,8 @@ function btnPress() {
     input1ValueInt = parseInt(input1Value);
     input2Value = input2.value;
     input2ValueInt = parseInt(input2Value);
-    console.log(input1Value);
-    console.log(input2Value);
+    input1.value = "";
+    input2.value = "";
     selection();
 }
 function selection() {
@@ -19,27 +19,23 @@ function selection() {
     switch (selectedValue) {
         case "+":
             let additionResult = input1ValueInt + input2ValueInt;
-            console.log(additionResult);
             fieldOutput(input1Value + " + "  + input2Value + " = " + additionResult);
             break;
         case "-":
             let subtractionResult = input1ValueInt - input2ValueInt;
-            console.log(subtractionResult);
             fieldOutput(input1Value + " - "  + input2Value + " = " + subtractionResult);
             break;
         case "/":
-            let divisionResult = input1ValueInt / input2ValueInt
-            console.log(divisionResult);
+            let divisionResult = input1ValueInt / input2ValueInt;
             fieldOutput(input1Value + " / "  + input2Value + " = " + divisionResult);
             break;
         case "*":
             let multiplicationResult = input1ValueInt * input2ValueInt;
-            console.log(multiplicationResult);
             fieldOutput(input1Value + " * "  + input2Value + " = " + multiplicationResult);
             break;
     }
 }
-
+// Funktion som skapar legend och skriver ut resultat.
 function fieldOutput (test, resultat) {
     const newLegend = document.createElement("legend");
     const legendOutput = document.createTextNode(test, resultat);
