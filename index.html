@@ -6,7 +6,20 @@
     <title>Räkna på det!</title>
 </head>
 <body>
-    
+    <input type="number" id="input1" placeholder="enter number">
+    <input type="number" id="input2" placeholder="enter number">
+    <select id="math" onchange="test();">
+        <option id="addition" value="+">+</option>
+        <option id="subctraction" value="-">-</option>
+        <option id="division" value="/">/</option>
+        <option id="multiplication" value="*">*</option>
+    </select>
+    <label for="math">Välj Räknesätt</label>
+    <br>
+    <button id="btn">Calculate!</button>
+    <fieldset id="output">
+        <legend>Resultat:</legend>
+    </fieldset>
     <script src="script.js"></script>
 </body>
 </html>
